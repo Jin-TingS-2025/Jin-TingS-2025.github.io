@@ -10,9 +10,11 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
 </head>
 <body>
+  <canvas id="particles"></canvas>
+
   <nav id="navbar">
     <div class="nav-inner">
-      <a href="#hero" class="nav-logo">SJT</a>
+      <a href="#hero" class="nav-logo">&lt;SJT /&gt;</a>
       <ul class="nav-links">
         <li><a href="#skills">技能</a></li>
         <li><a href="#projects">项目</a></li>
@@ -22,31 +24,57 @@
   </nav>
 
   <section id="hero">
+    <div class="hero-bg-orb"></div>
     <div class="container">
-      <div class="terminal-box">
-        <div class="terminal-bar">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="terminal-title">sjt@dev:~$</span>
+      <div class="hero-content">
+        <div class="hero-avatar">
+          <div class="avatar-placeholder">宋</div>
         </div>
-        <div class="terminal-body">
-          <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
-          <p class="output">宋金庭 / Jinting Song</p>
-          <p><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
-          <p class="output">C/C++ 开发工程师 · QT 开发者 · Linux 爱好者</p>
-          <p><span class="prompt">$</span> <span class="cmd">uptime</span></p>
-          <p class="output">21 岁，持续学习中</p>
-          <p><span class="prompt">$</span> <span class="cursor blink">█</span></p>
+        <h1 class="hero-name">
+          <span class="name-cn">宋金庭</span>
+          <span class="name-en">Jinting Song</span>
+        </h1>
+        <div class="hero-roles">
+          <span id="typewriter"></span><span class="cursor-blink">|</span>
         </div>
+        <p class="hero-bio">
+          热爱底层技术的 C/C++ 开发者，专注 QT 应用开发、Linux 系统编程与计算机视觉
+        </p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num" data-target="4">0</span>
+            <span class="stat-label">项目经验</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="10">0</span>
+            <span class="stat-label">技术技能</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-target="3">0</span>
+            <span class="stat-label">编程语言</span>
+          </div>
+        </div>
+        <a href="#skills" class="scroll-indicator">
+          <span class="scroll-text">了解更多</span>
+          <span class="scroll-arrow">↓</span>
+        </a>
       </div>
     </div>
   </section>
 
   <section id="skills">
     <div class="container">
-      <h2 class="section-title">技术栈</h2>
+      <h2 class="section-title">
+        <span class="title-icon">⚙️</span>
+        <span>技术栈</span>
+        <span class="title-line"></span>
+      </h2>
       <div class="skills-grid">
         <div class="skill-category">
-          <h3>编程语言</h3>
+          <div class="skill-header">
+            <span class="skill-icon">{ }</span>
+            <h3>编程语言</h3>
+          </div>
           <div class="skill-tags">
             <span class="tag">C/C++</span>
             <span class="tag">C++11</span>
@@ -55,7 +83,10 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>框架 & 库</h3>
+          <div class="skill-header">
+            <span class="skill-icon">⬡</span>
+            <h3>框架 & 库</h3>
+          </div>
           <div class="skill-tags">
             <span class="tag">QT</span>
             <span class="tag">OpenCV</span>
@@ -64,7 +95,10 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>Linux & 系统</h3>
+          <div class="skill-header">
+            <span class="skill-icon">🐧</span>
+            <h3>Linux & 系统</h3>
+          </div>
           <div class="skill-tags">
             <span class="tag">Linux 系统编程</span>
             <span class="tag">TCP/IP</span>
@@ -75,20 +109,29 @@
           </div>
         </div>
         <div class="skill-category">
-          <h3>数据库</h3>
+          <div class="skill-header">
+            <span class="skill-icon">🗄️</span>
+            <h3>数据库</h3>
+          </div>
           <div class="skill-tags">
             <span class="tag">MySQL</span>
             <span class="tag">SQLite</span>
           </div>
         </div>
         <div class="skill-category">
-          <h3>嵌入式</h3>
+          <div class="skill-header">
+            <span class="skill-icon">🔌</span>
+            <h3>嵌入式</h3>
+          </div>
           <div class="skill-tags">
             <span class="tag">STM32</span>
           </div>
         </div>
         <div class="skill-category">
-          <h3>工具链</h3>
+          <div class="skill-header">
+            <span class="skill-icon">🔧</span>
+            <h3>工具链</h3>
+          </div>
           <div class="skill-tags">
             <span class="tag">CMake</span>
             <span class="tag">Git</span>
@@ -101,86 +144,127 @@
 
   <section id="projects">
     <div class="container">
-      <h2 class="section-title">项目经历</h2>
+      <h2 class="section-title">
+        <span class="title-icon">📂</span>
+        <span>项目经历</span>
+        <span class="title-line"></span>
+      </h2>
+      <div class="projects-list">
 
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-icon">🖥️</span>
-          <div>
-            <h3>LanLink — 局域网通信工具</h3>
-            <span class="project-tech">QT · C++ · TCP · 多线程</span>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-num">01</div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-icon">🖥️</span>
+              <div>
+                <h3>LanLink — 局域网通信工具</h3>
+                <div class="project-tech-list">
+                  <span>QT</span><span>C++</span><span>TCP</span><span>多线程</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              基于 QT 和 C++ 开发的局域网通信工具。使用 QTcpSocket / QTcpServer 实现 TCP 通信，
+              通过 QThread 和 QThreadPool 管理多线程并发，支持文件传输、消息收发等功能。
+              运用 QMutex、QQueue 保证线程安全，使用 QFile、QDir 进行文件系统操作。
+            </p>
           </div>
         </div>
-        <p class="project-desc">
-          基于 QT 和 C++ 开发的局域网通信工具。使用 QTcpSocket / QTcpServer 实现 TCP 通信，
-          通过 QThread 和 QThreadPool 管理多线程并发，支持文件传输、消息收发等功能。
-          运用 QMutex、QQueue 保证线程安全，使用 QFile、QDir 进行文件系统操作。
-        </p>
-      </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-icon">🎵</span>
-          <div>
-            <h3>跨平台音乐播放器</h3>
-            <span class="project-tech">QT · QMediaPlayer · SQLite · C++</span>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-num">02</div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-icon">🎵</span>
+              <div>
+                <h3>跨平台音乐播放器</h3>
+                <div class="project-tech-list">
+                  <span>QT</span><span>QMediaPlayer</span><span>SQLite</span><span>C++</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              使用 QT 框架开发的跨平台音乐播放器，支持 Windows、Linux、macOS。
+              基于 QMediaPlayer 和 QMediaPlaylist 实现媒体播放控制，
+              利用 Qt 信号槽机制（signals/emit/connect）驱动交互逻辑。
+              使用 QtSQLite 存储播放列表，自定义 QSlider、QListWidget 等 UI 组件。
+            </p>
           </div>
         </div>
-        <p class="project-desc">
-          使用 QT 框架开发的跨平台音乐播放器，支持 Windows、Linux、macOS。
-          基于 QMediaPlayer 和 QMediaPlaylist 实现媒体播放控制，
-          利用 Qt 信号槽机制（signals/emit/connect）驱动交互逻辑。
-          使用 QtSQLite 存储播放列表，自定义 QSlider、QListWidget 等 UI 组件。
-        </p>
-      </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-icon">👁️</span>
-          <div>
-            <h3>人脸识别系统</h3>
-            <span class="project-tech">C++ · QT · OpenCV · LBP · SQLite</span>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-num">03</div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-icon">👁️</span>
+              <div>
+                <h3>人脸识别系统</h3>
+                <div class="project-tech-list">
+                  <span>C++</span><span>QT</span><span>OpenCV</span><span>LBP</span><span>SQLite</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              基于 C++、Qt 和 OpenCV 开发的人脸识别系统。使用 LBP（局部二值模式）算法进行特征提取，
+              结合 SQLite 存储人脸特征数据，利用 vector 和 map 等 STL 容器优化数据处理。
+              Qt 负责 GUI 界面开发，OpenCV 处理图像采集和预处理。
+            </p>
           </div>
         </div>
-        <p class="project-desc">
-          基于 C++、Qt 和 OpenCV 开发的人脸识别系统。使用 LBP（局部二值模式）算法进行特征提取，
-          结合 SQLite 存储人脸特征数据，利用 vector 和 map 等 STL 容器优化数据处理。
-          Qt 负责 GUI 界面开发，OpenCV 处理图像采集和预处理。
-        </p>
-      </div>
 
-      <div class="project-card">
-        <div class="project-header">
-          <span class="project-icon">📡</span>
-          <div>
-            <h3>Linux 网络编程项目</h3>
-            <span class="project-tech">C · Linux · GCC · UDP · Socket</span>
+        <div class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-num">04</div>
+          <div class="project-body">
+            <div class="project-header">
+              <span class="project-icon">📡</span>
+              <div>
+                <h3>Linux 网络编程项目</h3>
+                <div class="project-tech-list">
+                  <span>C</span><span>Linux</span><span>GCC</span><span>UDP</span><span>Socket</span>
+                </div>
+              </div>
+            </div>
+            <p class="project-desc">
+              Linux 环境下的 C 语言网络编程实践，涉及 UDP/TCP Socket 编程、
+              GCC 编译工具链、多进程并发处理等。深入理解 Linux 网络协议栈和系统调用。
+            </p>
           </div>
         </div>
-        <p class="project-desc">
-          Linux 环境下的 C 语言网络编程实践，涉及 UDP/TCP Socket 编程、
-          GCC 编译工具链、多进程并发处理等。深入理解 Linux 网络协议栈和系统调用。
-        </p>
+
       </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">联系方式</h2>
+      <h2 class="section-title">
+        <span class="title-icon">✉️</span>
+        <span>联系方式</span>
+        <span class="title-line"></span>
+      </h2>
       <div class="contact-grid">
         <a href="mailto:15714153218@163.com" class="contact-card">
-          <span class="contact-icon">📧</span>
+          <div class="contact-icon-wrap">
+            <span class="contact-icon">📧</span>
+          </div>
           <span class="contact-label">邮箱</span>
           <span class="contact-value">15714153218@163.com</span>
         </a>
         <a href="tel:15714153218" class="contact-card">
-          <span class="contact-icon">📞</span>
+          <div class="contact-icon-wrap">
+            <span class="contact-icon">📞</span>
+          </div>
           <span class="contact-label">电话</span>
           <span class="contact-value">15714153218</span>
         </a>
         <div class="contact-card">
-          <span class="contact-icon">📍</span>
+          <div class="contact-icon-wrap">
+            <span class="contact-icon">📍</span>
+          </div>
           <span class="contact-label">状态</span>
           <span class="contact-value">应届生 · 随时到岗</span>
         </div>
@@ -189,7 +273,7 @@
   </section>
 
   <footer>
-    <p>&copy; 2026 宋金庭 · Built with ❤️</p>
+    <p>&copy; 2026 宋金庭</p>
   </footer>
 
   <script src="script.js"></script>
