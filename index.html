@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="宋金庭 - C/C++ 开发工程师，熟悉 QT、OpenCV、Linux 系统编程">
+  <meta name="keywords" content="宋金庭,C++,QT,OpenCV,Linux,嵌入式,简历">
+  <title>宋金庭 | C/C++ 开发工程师</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">SJT</a>
+      <ul class="nav-links">
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="container">
+      <div class="terminal-box">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">sjt@dev:~$</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+          <p class="output">宋金庭 / Jinting Song</p>
+          <p><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
+          <p class="output">C/C++ 开发工程师 · QT 开发者 · Linux 爱好者</p>
+          <p><span class="prompt">$</span> <span class="cmd">uptime</span></p>
+          <p class="output">21 岁，持续学习中</p>
+          <p><span class="prompt">$</span> <span class="cursor blink">█</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">技术栈</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>编程语言</h3>
+          <div class="skill-tags">
+            <span class="tag">C/C++</span>
+            <span class="tag">C++11</span>
+            <span class="tag">STL</span>
+            <span class="tag">HTML/CSS/JS</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>框架 & 库</h3>
+          <div class="skill-tags">
+            <span class="tag">QT</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Qt Multimedia</span>
+            <span class="tag">Qt Network</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Linux & 系统</h3>
+          <div class="skill-tags">
+            <span class="tag">Linux 系统编程</span>
+            <span class="tag">TCP/IP</span>
+            <span class="tag">UDP</span>
+            <span class="tag">Makefile</span>
+            <span class="tag">Shell</span>
+            <span class="tag">GDB</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>数据库</h3>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">SQLite</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>嵌入式</h3>
+          <div class="skill-tags">
+            <span class="tag">STM32</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>工具链</h3>
+          <div class="skill-tags">
+            <span class="tag">CMake</span>
+            <span class="tag">Git</span>
+            <span class="tag">VS Code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">项目经历</h2>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🖥️</span>
+          <div>
+            <h3>LanLink — 局域网通信工具</h3>
+            <span class="project-tech">QT · C++ · TCP · 多线程</span>
+          </div>
+        </div>
+        <p class="project-desc">
+          基于 QT 和 C++ 开发的局域网通信工具。使用 QTcpSocket / QTcpServer 实现 TCP 通信，
+          通过 QThread 和 QThreadPool 管理多线程并发，支持文件传输、消息收发等功能。
+          运用 QMutex、QQueue 保证线程安全，使用 QFile、QDir 进行文件系统操作。
+        </p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">🎵</span>
+          <div>
+            <h3>跨平台音乐播放器</h3>
+            <span class="project-tech">QT · QMediaPlayer · SQLite · C++</span>
+          </div>
+        </div>
+        <p class="project-desc">
+          使用 QT 框架开发的跨平台音乐播放器，支持 Windows、Linux、macOS。
+          基于 QMediaPlayer 和 QMediaPlaylist 实现媒体播放控制，
+          利用 Qt 信号槽机制（signals/emit/connect）驱动交互逻辑。
+          使用 QtSQLite 存储播放列表，自定义 QSlider、QListWidget 等 UI 组件。
+        </p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">👁️</span>
+          <div>
+            <h3>人脸识别系统</h3>
+            <span class="project-tech">C++ · QT · OpenCV · LBP · SQLite</span>
+          </div>
+        </div>
+        <p class="project-desc">
+          基于 C++、Qt 和 OpenCV 开发的人脸识别系统。使用 LBP（局部二值模式）算法进行特征提取，
+          结合 SQLite 存储人脸特征数据，利用 vector 和 map 等 STL 容器优化数据处理。
+          Qt 负责 GUI 界面开发，OpenCV 处理图像采集和预处理。
+        </p>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <span class="project-icon">📡</span>
+          <div>
+            <h3>Linux 网络编程项目</h3>
+            <span class="project-tech">C · Linux · GCC · UDP · Socket</span>
+          </div>
+        </div>
+        <p class="project-desc">
+          Linux 环境下的 C 语言网络编程实践，涉及 UDP/TCP Socket 编程、
+          GCC 编译工具链、多进程并发处理等。深入理解 Linux 网络协议栈和系统调用。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">联系方式</h2>
+      <div class="contact-grid">
+        <a href="mailto:15714153218@163.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <span class="contact-label">邮箱</span>
+          <span class="contact-value">15714153218@163.com</span>
+        </a>
+        <a href="tel:15714153218" class="contact-card">
+          <span class="contact-icon">📞</span>
+          <span class="contact-label">电话</span>
+          <span class="contact-value">15714153218</span>
+        </a>
+        <div class="contact-card">
+          <span class="contact-icon">📍</span>
+          <span class="contact-label">状态</span>
+          <span class="contact-value">应届生 · 随时到岗</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 宋金庭 · Built with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
